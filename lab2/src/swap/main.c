@@ -6,9 +6,8 @@ int main()
 {
 	char ch1 = 'a';
 	char ch2 = 'b';
-
+  printf("Before: %c %c\n", ch1, ch2);
 	Swap(&ch1, &ch2);
-
-	printf("%c %c\n", ch1, ch2);
+	printf("After: %c %c\n", ch1, ch2);
 	return 0;
 }

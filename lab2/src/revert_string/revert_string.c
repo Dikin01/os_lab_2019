@@ -1,7 +1,19 @@
 #include "revert_string.h"
+#include "string.h"
+#include "stdio.h"
 
-void RevertString(char *str)
+extern void Swap(char* left, char* right)
 {
-	// your code here
+	char buff = *right;
+	*right = *left;
+	*left = buff;
+}
+
+extern void RevertString(char *str)
+{
+  int N = strlen(str)-1;
+	for (int i = 0; i < (N+1)/2; i++) {		
+		Swap(&str[i], &str[N - i]);
+	}	
 }
 
